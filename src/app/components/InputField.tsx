@@ -11,6 +11,7 @@ interface InputFieldProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   error?: boolean;
   errorMessage?: string;
+  disabled?: boolean;
 }
 
 export const InputField: React.FC<InputFieldProps> = ({
@@ -22,6 +23,7 @@ export const InputField: React.FC<InputFieldProps> = ({
   onChange,
   error = false,
   errorMessage,
+  disabled,
 }) => {
   return (
     <div className="flex flex-col gap-2 w-full">
@@ -37,6 +39,7 @@ export const InputField: React.FC<InputFieldProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        disabled={disabled}
         className={`border rounded-full p-[12px] pl-[20px] bg-third transition-all duration-200 focus:outline-none focus:ring-2 ${
           error ? 'ring-error' : 'ring-transparent'
         }`}

@@ -1,11 +1,10 @@
-@tailwind base;
-@tailwind components;
+@tailwindcss/preflight base;
 @tailwind utilities;
 @theme {
   --color-primary: #CC6237; 
   --color-primary-hover: #D1724B; 
   --color-secondary: #2A4D8E80; 
-  --color-withe: #FFF; 
+  --color-white: #FFF; 
   --color-third: #F6F6F6; 
   --color-error: #ED3338; 
   --drop-shadow-primary: 0 100px 200px rgba(0, 0, 0, 0.25);
