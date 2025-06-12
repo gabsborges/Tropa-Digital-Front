@@ -16,7 +16,7 @@ export default function EquipesPage() {
           <p className="text-[16px]">Bem vindo de volta, <span className="font-[600]">Kaique Steck</span></p>
           <h2 className="text-2xl font-bold text-primary">Todas equipes</h2>
         </div>
-        {/* Aqui entra o conteúdo da dashboard */}
+        
       </main>
     </div>
     </AuthRoute>

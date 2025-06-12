@@ -3,6 +3,7 @@
 
 import AuthRoute from "../components/AuthRoute"
 import Sidebar from "../components/Sidebar"
+import { TabelaEventos } from "../components/TabelaEventos"
 
 
 export default function EventosPage() {
@@ -16,7 +17,7 @@ export default function EventosPage() {
           <p className="text-[16px]">Bem vindo de volta, <span className="font-[600]">Kaique Steck</span></p>
           <h2 className="text-2xl font-bold text-primary">Todos eventos</h2>
         </div>
-        {/* Aqui entra o conteúdo da dashboard */}
+        <TabelaEventos/>
       </main>
     </div>
     </AuthRoute>

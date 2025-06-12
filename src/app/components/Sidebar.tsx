@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation'
 import SairIcon from './SairIcon'
 import PerfilIcon from './PerfilIcon'
 import Logo from './Logo'
+import PlaceHolder from './PlaceHolder'
 
 export default function Sidebar() {
   const pathname = usePathname()
@@ -57,6 +58,14 @@ export default function Sidebar() {
       </div>
 
       <div className='py-[30px]'>
+
+        <div className='flex gap-[10px] items-center'>
+          <PlaceHolder width={40} height={40}/>
+          <div className='flex flex-col gap-[2px]'>
+            <p className='font-[500]'>Kaique Steck</p>
+            <p className='text-[13px] '>Administrador</p>
+          </div>
+        </div>
 
         <Link
           href='/perfil'
