@@ -1,6 +1,9 @@
 import React from "react";
 import GreenLightIcon from "./GreenLightIcon";
 import DotsIcon from "./DotsIcon";
+import { SearchInputField } from "./SearchInputField";
+import InsertButton from "./InsertButton";
+import Pagination from "./Pagination";
 
 interface Evento {
   nome: string;
@@ -17,9 +20,13 @@ const eventos: Evento[] = [
 
 export function TabelaEventos() {
   return (
-    <div className="bg-white p-[20px]">
-        <div>
-
+    <div className="bg-white p-[20px] mt-[30px] border border-[#09428F2B] rounded-[10px]">
+        <div className="flex flex-row justify-end gap-[10px] py-[12px]">
+          <SearchInputField
+          id="searchBar"
+          placeholder="Buscar eventos"
+          />
+          <InsertButton/>
         </div>
         <table className="w-full border-none">
       <thead>
@@ -28,7 +35,7 @@ export function TabelaEventos() {
           <th className="p-[12px] text-center">Total de equipes</th>
           <th className="p-[12px] text-center">Status</th>
           <th className="p-[12px] text-center">Data</th>
-          <th className="p-[12px] text-center">Opções</th>
+          <th className="p-[12px] text-center"></th>
         </tr>
       </thead>
       <tbody>
@@ -38,13 +45,13 @@ export function TabelaEventos() {
             <td className="p-[12px] text-center">{evento.totalEquipes}</td>
             <td className="p-[12px] text-center"><GreenLightIcon/>  {evento.status}</td>
             <td className="p-[12px] text-center">{evento.data}</td>
-            <td className="p-[12px] text-center"><div className="cursor-pointer"><DotsIcon/></div></td>
+            <td className="p-[12px] text-center w-[100px]"><div className="cursor-pointer"><DotsIcon/></div></td>
           </tr>)
         )}
       </tbody>
     </table>
     <div>
-
+      <Pagination/>
     </div>
     </div>
   )
